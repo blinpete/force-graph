@@ -1,17 +1,15 @@
-import pluginVue from 'eslint-plugin-vue'
-import vueTsEslintConfig from '@vue/eslint-config-typescript'
+import antfu from '@antfu/eslint-config'
 
-export default [
+export default antfu(
   {
-    name: 'app/files-to-lint',
-    files: ['**/*.{ts,mts,tsx,vue}'],
+    unocss: true,
   },
-
   {
-    name: 'app/files-to-ignore',
-    ignores: ['**/dist/**', '**/dist-ssr/**', '**/coverage/**'],
+    rules: {
+      'vue/no-v-text-v-html-on-component': 'off',
+      'jsonc/sort-keys': 'off',
+      'unocss/order-attributify': 'off',
+      'no-console': 'off',
+    },
   },
-
-  ...pluginVue.configs['flat/essential'],
-  ...vueTsEslintConfig(),
-]
+)
