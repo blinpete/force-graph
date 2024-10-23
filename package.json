@@ -31,6 +31,7 @@
     "@iconify/json": "^2.2.260",
     "@unocss/eslint-config": "^0.63.1",
     "@unocss/eslint-plugin": "^0.63.1",
+    "@unocss/preset-web-fonts": "^0.63.1",
     "unocss": "^0.63.1",
     "vite-plugin-inspect": "^0.8.7",
 

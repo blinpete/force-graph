@@ -1,39 +1,18 @@
-# force-directed-graph-vue
+# Force graph
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a (FDG) force-directed graph tool. There are two modes available:
+- Mermaid: takes text input in Mermaid-like syntax, parses it, renders FDG.
+- Excalidraw: provides UI toolbars, listens to mouse/touch events to create nodes and edges, renders FDG.
 
-## Recommended IDE Setup
+## Credits
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Huge thanks to these amazing projects:
 
-## Type Support for `.vue` Imports in TS
+- force-directed graph powered by [`vis-network`](https://github.com/visjs/vis-network/) engine
+- inspired by antfu's [`vite-plugin-inspect`](https://github.com/antfu-collective/vite-plugin-inspect)
+- syntax based on [Mermaid](https://mermaid.js.org/)
+- toolbars inspired by [Excalidraw](https://excalidraw.com/)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Lisence
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
+[MIT](./LICENSE) License © 2024-Present [Peter Blinov](https://github.com/blinpete)
