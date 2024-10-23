@@ -89,7 +89,7 @@ onMounted(() => {
   setNetwork(new Network(container.value!, props.data, options))
 
   if (props.setEventHandlers) {
-    props.setEventHandlers(network)
+    props.setEventHandlers(network!)
   }
 
   // --------------------------------- set watchers
