@@ -1,4 +1,5 @@
 import ExcalidrawView from '@/modules/excalidraw/ExcalidrawView.vue'
+import MermaidView from '@/modules/mermaid/MermaidView.vue'
 import HomeView from '@/views/HomeView.vue'
 import NotFound from '@/views/NotFound.vue'
 import { createRouter, createWebHistory } from 'vue-router'
@@ -8,16 +9,21 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
       component: HomeView,
     },
     {
+      path: '/me',
+      component: MermaidView,
+    },
+    {
       path: '/ex',
-      name: 'ex',
       component: ExcalidrawView,
     },
-
-    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: NotFound,
+    },
   ],
 })
 
