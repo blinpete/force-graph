@@ -7,6 +7,13 @@ import GraphToolbarButton from './toolbar-buttons/GraphToolbarButton.vue'
 
 <template>
   <div flex="~ row" px-1 py-1 gap-0.5 text-main>
+    <GraphToolbarButton
+      v-show="!settings.zenMode"
+      @click="$router.push('/')"
+    >
+      <span class="i-mdi-home-outline" />
+    </GraphToolbarButton>
+
     <BtnHelp v-show="!settings.zenMode" />
 
     <GraphToolbarButton

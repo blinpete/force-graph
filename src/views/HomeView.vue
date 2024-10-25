@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router'
 import logo from '../assets/logo.svg?raw'
 </script>
 
@@ -28,10 +29,10 @@ import logo from '../assets/logo.svg?raw'
     </div>
 
     <div flex="~ row" justify-center gap-4>
-      <RouterLink to="/me" class="link">
+      <RouterLink to="/me?help=true" class="link">
         Mermaid
       </RouterLink>
-      <RouterLink to="/ex" class="link">
+      <RouterLink to="/ex?help=true" class="link">
         Excalidraw
       </RouterLink>
     </div>
