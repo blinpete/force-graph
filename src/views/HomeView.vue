@@ -3,7 +3,7 @@ import logo from '../assets/logo.svg?raw'
 </script>
 
 <template>
-  <main flex="~ col" items-center justify-center gap-10 text-main>
+  <main flex="~ col" items-center justify-center gap-10 text-main class="font--fancy">
     <div
       bg-active p3 rounded-full h-64px w-64px border-2 border-main
       hover:rotate-20 hover:translate-x-5 duration-500

@@ -18,7 +18,7 @@ export default defineConfig({
     'bg-main': 'bg-white dark:bg-[#121212]',
     'bg-active': 'bg-gray-400/10',
     'bg-subtle': 'bg-gray-400/3',
-    'text-main': 'text-[#121212] dark:text-[#ccc]',
+    'text-main': 'text-[#121212] dark:text-[#ddd]',
     'text-subtle': 'text-[#656565] dark:text-[#909090]',
 
     'link': [

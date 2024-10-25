@@ -1,17 +1,22 @@
 :root {
-  font-family: 'Averia Sans Libre', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  background: linear-gradient(to top, transparent, #111, transparent);
-  background-color: #1e1e1e;
-
+  
+  background: linear-gradient(to top, transparent, #111 80%, 95%, transparent);
+  background-color: #000;
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.font--fancy {
+  font-family: 'Averia Sans Libre', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -29,6 +34,6 @@ body {
 
 
 .light:root {
-  background: linear-gradient(to top, transparent, rgb(240,240,240,0.8), transparent);
+  background: linear-gradient(to top, transparent, #eee 70%, 95%, transparent);
   background-color: #fff;
 }
