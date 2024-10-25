@@ -3,6 +3,7 @@ import ColorPicker from '@/modules/shared/ColorPicker.vue'
 import { nodeColors } from '@/modules/shared/graph-runtime-config'
 import GraphToolbarButton from '@/modules/shared/GraphToolbarButton.vue'
 import { theme } from '@/modules/shared/theme/store'
+import { ref, watch } from 'vue'
 import { deleteSelected } from './handle-selection'
 import { edges, nodes } from './model/data'
 import { selectedEdges, selectedEdgesDashes, selectedEdgesNotDashes } from './model/selected-edge'
@@ -14,6 +15,13 @@ const shapes = [
   { values: ['triangle'], icon: 'i-uil-triangle' },
   { values: ['diamond'], icon: 'i-ic-outline-square rotate-45 scale-85' },
 ]
+
+const lastSelectedNode = ref(selectedNode.value)
+watch(selectedNode, (next) => {
+  if (next !== undefined) {
+    lastSelectedNode.value = next
+  }
+})
 </script>
 
 <template>
@@ -24,7 +32,7 @@ const shapes = [
       :disabled="!selectedNode" disabled:cursor-no-drop
       :value="selectedNode?.label"
       @change="val => {
-        nodes.update({ id: selectedNode?.id, label: val.target.value })
+        nodes.update({ id: lastSelectedNode?.id, label: val.target.value })
       }"
     >
 
@@ -65,12 +73,14 @@ const shapes = [
     </h1>
     <div flex="~ raw" gap-1>
       <GraphToolbarButton
+        :disabled="!selectedEdges?.length" disabled:cursor-no-drop
         :class="selectedEdgesDashes ? ' bg-blueGray bg-op-20' : ''"
         @click="edges.update(selectedEdges?.map(x => ({ ...x, dashes: true })))"
       >
         <span class="i-radix-icons-border-dashed -rotate-45" />
       </GraphToolbarButton>
       <GraphToolbarButton
+        :disabled="!selectedEdges?.length" disabled:cursor-no-drop
         :class="selectedEdgesNotDashes ? ' bg-blueGray bg-op-20' : ''"
         @click="edges.update(selectedEdges?.map(x => ({ ...x, dashes: false })))"
       >
@@ -82,8 +92,8 @@ const shapes = [
       <GraphToolbarButton
         @click="deleteSelected()"
       >
-        <!-- <span class="i-icon-park-outline:delete-key" /> -->
-        <span class="i-icon-park-solid:delete-key" />
+        <span class="i-icon-park-outline:delete-key" />
+        <!-- <span class="i-icon-park-solid:delete-key" /> -->
       </GraphToolbarButton>
     </div>
   </div>
