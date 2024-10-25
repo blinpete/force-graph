@@ -27,9 +27,9 @@ const isHelp = makeRefIsHelp()
   <GraphSource
     v-show="!settings.zenMode"
     border="~ main" shadow rounded-md
-    fixed top-3 bottom-3 left-3 w-full max-w-16rem
+    fixed top-3 left-3 w-full max-w-16rem
     bg-main backdrop-blur-8 bg-op-70 dark:bg-op-30
-    p3 text-sm text-main
+    text-sm text-main
   />
 
   <HelpCard
