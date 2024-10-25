@@ -2,11 +2,11 @@
 import type { Options } from 'vis-network'
 import Graph from '@/modules/shared/Graph.vue'
 import GraphToolbar from '@/modules/shared/GraphToolbar.vue'
+import HelpCard from '@/modules/shared/help/HelpCard.vue'
 import { network, settings } from '@/modules/shared/store'
 import { makeRefIsHelp } from '../shared/help/store'
 import GraphToolbarSelectedNode from './GraphToolbarSelectedNode.vue'
 import { setSelectionRefs } from './handle-selection'
-import HelpCard from './help/HelpCard.vue'
 import { handleKeyboard } from './keyboard'
 import { edges, nodes } from './model/data'
 import { selectedEdgesIds } from './model/selected-edge'
@@ -70,11 +70,22 @@ function overrideOptions(options: Options) {
     v-show="isHelp && !settings.zenMode"
     fixed top-16 right-3 top max-w-20rem
     bg-main border border-main rounded-lg
-  />
+  >
+    <li help-item>
+      <BtnAddNode help-btn />
+      <span help-desc><strong help-accent>add a node</strong>, pick a location by clicking on the canvas.</span>
+    </li>
+    <li help-item>
+      <BtnAddEdge help-btn />
+      <span help-desc><strong help-accent>add an edge</strong> between two nodes, 1st click picks "from" node, 2nd click picks "to".</span>
+    </li>
+    <li help-item>
+      <BtnSavePositions help-btn />
+      <span help-desc><strong help-accent>save coordinates</strong> of all the nodes, so that after page refresh they are on the same positions.</span>
+    </li>
+    <li help-item>
+      <BtnDropCache help-btn />
+      <span help-desc><strong help-accent>delete all</strong> the nodes and edges and start from scratch.</span>
+    </li>
+  </HelpCard>
 </template>
-
-<style>
-body {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-</style>

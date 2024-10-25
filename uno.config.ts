@@ -26,6 +26,12 @@ export default defineConfig({
       'underline-[#959595] dark:underline-[#555]',
       'text-subtle font-400 hover:text-main hover:underline-current',
     ].join(' '),
+
+    'help-item': 'flex items-start',
+    'help-btn': 'mr-1.5 mt-1 border border-subtle bg-active',
+    'help-desc': 'text-subtle',
+    'help-accent': 'text-main dark:font-normal light:font-500',
+
   },
   presets: [
     presetUno(),

@@ -7,5 +7,12 @@ import { graphDataRaw } from './model/cache'
     v-model="graphDataRaw"
     spellcheck="false"
     outline-none font-mono
+    class="root"
   />
 </template>
+
+<style lang="css" scoped>
+.root {
+  scrollbar-width: none;
+}
+</style>
