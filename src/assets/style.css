@@ -5,7 +5,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  background: linear-gradient(to top, black 20%, transparent);
+  background: linear-gradient(to top, transparent, #111, transparent);
+  background-color: #1e1e1e;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,11 +27,8 @@ body {
   text-align: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    /* background-color: #ffffff; */
-    background: linear-gradient(to top, #ddd 20%, transparent);
 
-  }
+.light:root {
+  background: linear-gradient(to top, transparent, rgb(209,209,209,0.8), transparent);
+  background-color: #ebebeb;
 }

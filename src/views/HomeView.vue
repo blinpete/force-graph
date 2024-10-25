@@ -1,14 +1,15 @@
+<script setup lang="ts">
+import logo from '../assets/logo.svg?raw'
+</script>
+
 <template>
   <main flex="~ col" items-center justify-center gap-10 text-main>
     <div
       bg-active p3 rounded-full h-64px w-64px border-2 border-main
       hover:rotate-20 hover:translate-x-5 duration-500
-    >
-      <img
-        src="/favicon.svg" alt="logo"
-        width="64" height="64"
-      >
-    </div>
+      flex justify-center items-center
+      v-html="logo"
+    />
 
     <div flex="~ row" gap-2 items-center class="-mt-2">
       <h1 font-900 text-14 class="line-height-none">
@@ -37,12 +38,11 @@
 
     <div>
       <a
-        style="text-decoration: none; opacity: 90;"
-
         class="link"
         pos-fixed bottom-3 right-5
         href="https://github.com/blinpete/force-graph"
         target="_blank" rel="noopener noreferrer"
+        style="text-decoration: none;"
       >@blinpete</a>
     </div>
   </main>
