@@ -24,6 +24,9 @@ const model = defineModel<string>()
   left: 0;
   background-color: inherit;
 }
+.picker__input:disabled {
+  opacity: 0.5;
+}
 .picker__input:hover {
   transform: scale(1.2);
 }

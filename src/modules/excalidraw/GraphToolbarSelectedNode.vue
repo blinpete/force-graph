@@ -21,6 +21,7 @@ const shapes = [
     <input
       border="~ main" my-2 px-2
       bg-transparent outline-none rounded
+      :disabled="!selectedNode" disabled:cursor-no-drop
       :value="selectedNode?.label"
       @change="val => {
         nodes.update({ id: selectedNode?.id, label: val.target.value })
@@ -35,6 +36,7 @@ const shapes = [
         v-for="shape in shapes"
         :key="`shape-${shape.values[0]}`"
         :class="{ 'bg-neutral bg-op-20': shape.values.includes(selectedNode?.shape) }"
+        :disabled="!selectedNode" disabled:cursor-no-drop
         @click="nodes.update({ id: selectedNode?.id, shape: shape.values[0] })"
       >
         <span :class="shape.icon" />
@@ -47,6 +49,7 @@ const shapes = [
     <div flex="~ row">
       <GraphToolbarButton>
         <ColorPicker
+          :disabled="!selectedNode" disabled:cursor-no-drop
           :model-value="selectedNode?.color?.background || nodeColors[theme].background"
           @update:model-value="val => {
             nodes.update({ id: selectedNode?.id, color: { background: val, highlight: { background: val } } })
