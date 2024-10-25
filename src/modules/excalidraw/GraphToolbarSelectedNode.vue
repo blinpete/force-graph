@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import ColorPicker from '@/modules/shared/ColorPicker.vue'
 import { nodeColors } from '@/modules/shared/graph-runtime-config'
-import GraphToolbarButton from '@/modules/shared/GraphToolbarButton.vue'
 import { theme } from '@/modules/shared/theme/store'
+import GraphToolbarButton from '@/modules/shared/toolbar-buttons/GraphToolbarButton.vue'
 import { ref, watch } from 'vue'
 import { deleteSelected } from './handle-selection'
 import { edges, nodes } from './model/data'

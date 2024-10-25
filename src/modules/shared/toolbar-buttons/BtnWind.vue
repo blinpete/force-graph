@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import GraphToolbarButton from './GraphToolbarButton.vue'
-import { network } from './store'
+import { network } from '../store'
 
 const winds = [
   { values: ['off'], icon: 'i-tabler-wind-off', setting: { x: 0, y: 0 } },

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import GraphToolbarButton from '../GraphToolbarButton.vue'
+import GraphToolbarButton from '../toolbar-buttons/GraphToolbarButton.vue'
 import { nextTheme, store } from './store'
 </script>
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { network } from '../store'
 import GraphToolbarButton from './GraphToolbarButton.vue'
-import { network } from './store'
 
 const strongGravity = ref(false)
 </script>

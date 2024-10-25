@@ -10,6 +10,7 @@ export default antfu(
       'jsonc/sort-keys': 'off',
       'unocss/order-attributify': 'off',
       'no-console': 'off',
+      'vue/no-undef-components': 'error',
     },
   },
 )
