@@ -29,6 +29,6 @@ body {
 
 
 .light:root {
-  background: linear-gradient(to top, transparent, rgb(209,209,209,0.8), transparent);
-  background-color: #ebebeb;
+  background: linear-gradient(to top, transparent, rgb(240,240,240,0.8), transparent);
+  background-color: #fff;
 }

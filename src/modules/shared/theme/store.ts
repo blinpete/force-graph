@@ -10,7 +10,7 @@ export type Theme = keyof typeof modes
 
 const DEFAULT_THEME: Theme = 'dark'
 
-const { system, store } = useColorMode({
+export const { system, store } = useColorMode({
   selector: 'html',
   attribute: 'class',
   modes,
